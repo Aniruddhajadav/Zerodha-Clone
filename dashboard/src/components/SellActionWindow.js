@@ -12,7 +12,7 @@ const SellActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = () => {
-    axios.post("http://localhost:3001/sellOrder", {
+    axios.post(PORT || "http://localhost:3001/sellOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

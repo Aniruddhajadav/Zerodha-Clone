@@ -6,7 +6,7 @@ const Orders = () => {
   const [allOrders, setallOrders] = useState([]);
 
   useState(() => {
-    axios.get("http://localhost:3001/allOrders").then((res) => {
+    axios.get(PORT || "http://localhost:3001/allOrders").then((res) => {
       console.log(res.data);
       setallOrders(res.data);
     });

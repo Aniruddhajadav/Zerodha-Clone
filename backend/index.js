@@ -268,5 +268,5 @@ app.listen(PORT, () => {
   console.log("App started!");
   mongoose.connect(uri);
   console.log("DB connected!");
-  console.log(PORT);
+  console.log(FPORT);
 });

@@ -6,10 +6,12 @@ const Orders = () => {
   const [allOrders, setallOrders] = useState([]);
 
   useState(() => {
-    axios.get(PORT || "http://localhost:3001/allOrders").then((res) => {
-      console.log(res.data);
-      setallOrders(res.data);
-    });
+    axios
+      .get("https://zerodha-clone-s76j.onrender.com/allOrders")
+      .then((res) => {
+        console.log(res.data);
+        setallOrders(res.data);
+      });
   }, []);
 
   if (allOrders.length === 0) {

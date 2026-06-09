@@ -10,12 +10,10 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useState(() => {
-    axios
-      .get(`${API_URL || "http://localhost:3001"}/allHoldings`)
-      .then((res) => {
-        console.log(res.data);
-        setAllHoldings(res.data);
-      });
+    axios.get(`${API_URL}/allHoldings`).then((res) => {
+      console.log(res.data);
+      setAllHoldings(res.data);
+    });
   }, []);
 
   const labels = allHoldings.map((subArray) => subArray["name"]);

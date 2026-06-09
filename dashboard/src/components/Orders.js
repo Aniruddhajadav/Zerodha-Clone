@@ -8,7 +8,7 @@ const Orders = () => {
   const [allOrders, setallOrders] = useState([]);
 
   useState(() => {
-    axios.get(`${API_URL || "http://localhost:3001"}/allOrders`).then((res) => {
+    axios.get(`${API_URL}/allOrders`).then((res) => {
       console.log(res.data);
       setallOrders(res.data);
     });

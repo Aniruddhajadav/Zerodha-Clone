@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3001/login",
+        "https://zerodha-clone-s76j.onrender.com/login",
         {
           ...inputValue,
         },
@@ -43,7 +43,7 @@ const Login = () => {
         handleSuccess(message);
         setTimeout(() => {
           navigate("/");
-        }, 1000);
+        }, 3000);
       } else {
         handleError(message);
       }

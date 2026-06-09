@@ -8,12 +8,10 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useState(() => {
-    axios
-      .get("https://zerodha-clone-s76j.onrender.com/allHoldings")
-      .then((res) => {
-        console.log(res.data);
-        setAllHoldings(res.data);
-      });
+    axios.get("http://localhost:3001/allHoldings").then((res) => {
+      console.log(res.data);
+      setAllHoldings(res.data);
+    });
   }, []);
 
   const labels = allHoldings.map((subArray) => subArray["name"]);

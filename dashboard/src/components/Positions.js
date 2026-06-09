@@ -7,12 +7,10 @@ const Positions = () => {
   const [allPositions, setallPositions] = useState([]);
 
   useState(() => {
-    axios
-      .get("https://zerodha-clone-s76j.onrender.com/allPositions")
-      .then((res) => {
-        console.log(res.data);
-        setallPositions(res.data);
-      });
+    axios.get("http://localhost:3001/allPositions").then((res) => {
+      console.log(res.data);
+      setallPositions(res.data);
+    });
   }, []);
 
   return (

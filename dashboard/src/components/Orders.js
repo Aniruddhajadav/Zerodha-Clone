@@ -7,7 +7,7 @@ const Orders = () => {
 
   useState(() => {
     axios
-      .get("http://zerodha-clone-s76j.onrender.com/allOrders")
+      .get("https://zerodha-clone-s76j.onrender.com/allOrders")
       .then((res) => {
         console.log(res.data);
         setallOrders(res.data);

@@ -8,7 +8,7 @@ const Positions = () => {
 
   useState(() => {
     axios
-      .get("http://zerodha-clone-s76j.onrender.com/allPositions")
+      .get("https://zerodha-clone-s76j.onrender.com/allPositions")
       .then((res) => {
         console.log(res.data);
         setallPositions(res.data);

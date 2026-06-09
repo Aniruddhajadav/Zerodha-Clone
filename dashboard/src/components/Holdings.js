@@ -4,13 +4,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { VerticalGraph } from "./VerticalGraph";
 
+const API_URL = process.env.PORT || "http://localhost:3001";
+
 // import { holdings } from "../data/data";
 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useState(() => {
-    axios.get(PORT || "http://localhost:3001/allHoldings").then((res) => {
+    axios.get(`${API_URL}/allHoldings`).then((res) => {
       console.log(res.data);
       setAllHoldings(res.data);
     });

@@ -9,12 +9,14 @@ import GeneralContext from "./GeneralContext";
 
 import "./ActionWindow.css";
 
+const API_URL = process.env.PORT || "http://localhost:3001";
+
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-    axios.post(PORT || "http://localhost:3001/newOrder", {
+    axios.post(`${API_URL}/newOrder`, {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

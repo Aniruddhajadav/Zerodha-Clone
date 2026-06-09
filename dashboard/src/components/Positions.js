@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -7,12 +9,10 @@ const Positions = () => {
   const [allPositions, setallPositions] = useState([]);
 
   useState(() => {
-    axios
-      .get("https://zerodha-clone-s76j.onrender.com/allPositions")
-      .then((res) => {
-        console.log(res.data);
-        setallPositions(res.data);
-      });
+    axios.get(PORT || "http://localhost:3001/allPositions").then((res) => {
+      console.log(res.data);
+      setallPositions(res.data);
+    });
   }, []);
 
   return (

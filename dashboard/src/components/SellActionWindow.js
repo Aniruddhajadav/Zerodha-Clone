@@ -7,14 +7,14 @@ import GeneralContext from "./GeneralContext";
 
 import "./ActionWindow.css";
 
-const API_URL = process.env.PORT || "http://localhost:3001";
+const API_URL = process.env.PORT;
 
 const SellActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = () => {
-    axios.post(`${API_URL}/sellOrder`, {
+    axios.post(`${API_URL || "http://localhost:3001"}/sellOrder`, {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

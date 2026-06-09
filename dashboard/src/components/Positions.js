@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = process.env.PORT || "http://localhost:3001";
+const API_URL = process.env.PORT;
 
 // import { positions } from "../data/data";
 
@@ -9,10 +9,12 @@ const Positions = () => {
   const [allPositions, setallPositions] = useState([]);
 
   useState(() => {
-    axios.get(`${API_URL}/allPositions`).then((res) => {
-      console.log(res.data);
-      setallPositions(res.data);
-    });
+    axios
+      .get(`${API_URL || "http://localhost:3001"}/allPositions`)
+      .then((res) => {
+        console.log(res.data);
+        setallPositions(res.data);
+      });
   }, []);
 
   return (

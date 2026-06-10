@@ -30,7 +30,7 @@ app.use(
 
 app.use(cookieParser());
 app.use(express.json());
-app.use("/support", authRoute);
+app.use("/", authRoute);
 
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [

@@ -33,6 +33,10 @@ useEffect(() => {
 }, [cookies, navigate, removeCookie]);
 
 function SupportPage() {
+  const navigate = useNavigate();
+  const [cookies, removeCookie] = useCookies([]);
+  const [username, setUsername] = useState("");
+
   return (
     <>
       <Hero />

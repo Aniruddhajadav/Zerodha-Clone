@@ -8,10 +8,6 @@ import Education from "./Education";
 import OpenAccount from "../OpenAccount";
 
 function HomePage() {
-  const navigate = useNavigate();
-  const [cookies, removeCookie] = useCookies([]);
-  const [username, setUsername] = useState("");
-
   return (
     <>
       <Hero />

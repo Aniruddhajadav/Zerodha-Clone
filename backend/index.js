@@ -15,6 +15,7 @@ const authRoute = require("./routes/AuthRoute");
 const PORT = process.env.PORT || 3001;
 const uri = process.env.MONGO_URL;
 const FPORT = process.env.FPORT;
+const DPORT = process.env.DPORT;
 
 const app = express();
 

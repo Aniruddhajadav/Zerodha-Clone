@@ -9,8 +9,6 @@ import { useCookies } from "react-cookie";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
-
 function SupportPage() {
   const navigate = useNavigate();
   const [cookies, removeCookie] = useCookies([]);
@@ -22,7 +20,7 @@ function SupportPage() {
         navigate("/login");
       }
       const { data } = await axios.post(
-        `${API_URL}/support`,
+        `/support`,
         {},
         { withCredentials: true },
       );

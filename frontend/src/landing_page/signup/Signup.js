@@ -44,7 +44,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate(`${API_URL}`);
+          navigate("/");
         }, 3000);
       } else {
         handleError(message);

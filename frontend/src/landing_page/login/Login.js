@@ -44,7 +44,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate(`${API_URL}`);
+          navigate(`${API_URL}/support`);
         }, 3000);
       } else {
         handleError(message);

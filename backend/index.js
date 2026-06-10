@@ -21,7 +21,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: [FPORT || "http://localhost:3000"],
+    origin: [FPORT || "http://localhost:3000", DPORT],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),

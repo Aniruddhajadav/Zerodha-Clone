@@ -7,7 +7,7 @@ import GeneralContext from "./GeneralContext";
 
 import "./ActionWindow.css";
 
-const API_URL = process.env.PORT;
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
 const SellActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);

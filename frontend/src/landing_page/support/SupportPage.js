@@ -19,11 +19,7 @@ function SupportPage() {
       if (!cookies.token) {
         navigate("/login");
       }
-      const { data } = await axios.post(
-        `/support`,
-        {},
-        { withCredentials: true },
-      );
+      const { data } = await axios.post("/", {}, { withCredentials: true });
       const { status, user } = data;
       setUsername(user);
       return status

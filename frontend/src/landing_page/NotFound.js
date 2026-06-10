@@ -11,7 +11,6 @@ function NotFound() {
       </div>
     </div>
   );
-  s;
 }
 
 export default NotFound;

@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
+
 const Login = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
@@ -31,7 +33,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://zerodha-clone-s76j.onrender.com/login",
+        `${API_URL}/login`,
         {
           ...inputValue,
         },

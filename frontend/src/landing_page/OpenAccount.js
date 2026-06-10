@@ -20,7 +20,6 @@ function OpenAccount() {
       </div>
     </div>
   );
-  s;
 }
 
 export default OpenAccount;

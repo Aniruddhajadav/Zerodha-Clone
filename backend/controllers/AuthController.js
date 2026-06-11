@@ -17,6 +17,7 @@ module.exports.Signup = async (req, res, next) => {
       secure: true,
       sameSite: "none",
       path: "/",
+      maxAge: 24 * 60 * 60 * 1000,
     });
     res
       .status(201)
@@ -48,6 +49,7 @@ module.exports.Login = async (req, res, next) => {
       secure: true,
       sameSite: "none",
       path: "/",
+      maxAge: 24 * 60 * 60 * 1000,
     });
     res
       .status(201)

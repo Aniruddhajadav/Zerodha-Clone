@@ -2,7 +2,6 @@
 A full-stack (MERN) web application clone of **Zerodha**, India’s leading stock brokerage platform. This project beautifully replicates both the public-facing marketing landing pages and the core functionalities of the immersive **Kite Dashboard** used for tracking and managing stock market portfolios.
 
 ## 🚀 Live Demo
-* Insert your hosted link here if available *
 > **Frontend / Landing Page:** [Live Demo Link](https://zerodha-clone-oo65.onrender.com)  
 > **Kite Dashboard UI:** [Dashboard Link](https://zcdashb.netlify.app/)
 

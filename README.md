@@ -20,20 +20,6 @@ A full-stack (MERN) web application clone of **Zerodha**, India’s leading stoc
 * **Data Visualizations:** Dynamic graphs and interactive doughnut/vertical charts powered by `Chart.js` for visually evaluating asset distribution and portfolio balance.
 
 ## 🛠️ Tech Stack
-**Frontend & Dashboard:**
-* **React.js** (Functional Components, Hooks)
-* **React Router DOM** (Multi-page Navigation)
-* **Material UI (MUI) & Bootstrap** (Responsive Grid & Styling)
-* **Chart.js / React-Chartjs-2** (Data Visualization)
-
-**Backend & Database:**
-* **Node.js** & **Express.js** (REST API Construction)
-* **MongoDB** & **Mongoose** (Data Schemas & Object Modeling)
-* **Dotenv** (Environment Variable Management)
-
-## 🛠️ Tech Stack Breakdowns
-
-The ecosystem is decoupled into three individual spaces:
 
 ### 1. Frontend (Marketing Web)
 *   **Core:** React.js (Functional Components, Hooks)

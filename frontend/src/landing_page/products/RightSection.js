@@ -8,7 +8,7 @@ function RightSection({ productName, productDesription, learnMore, imageURL }) {
           <h1>{productName}</h1>
           <p>{productDesription}</p>
           <div>
-            <a href={learnMore}>
+            <a href={learnMore} target="_blank">
               LearnMore{" "}
               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </a>

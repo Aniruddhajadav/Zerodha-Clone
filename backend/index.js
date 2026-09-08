@@ -265,6 +265,14 @@ app.post("/logout", (req, res) => {
   return res.status(200).json({ message: "Successfully logged out" });
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    success: true,
+    status: "Ok",
+    timestamp: new Date().toISOString(),
+  });
+});
+
 app.listen(PORT, () => {
   console.log("App started!");
   mongoose.connect(uri);
